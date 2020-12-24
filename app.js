@@ -1,4 +1,5 @@
 function accordion(start) {
+
 	const accordion = Array.from(document.querySelector(".accordion").children);
 	const accordion_title = accordion.filter(child => child.classList.contains("accordion__title"));
 	const accordion_body = accordion.filter(child => child.classList.contains("accordion__body"));
