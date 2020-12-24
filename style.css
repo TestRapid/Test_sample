@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container {
+	margin: 5% 10%;
+}
+.accordion {
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	background: rgb(0, 177, 201);
+}
+.accordion__title {
+	font: 600 1.3em Sans-serif;
+	padding: 15px 30px;
+	color: rgb(255, 255, 255);
+	position: relative;
+	cursor: pointer;
+	transition: background 0.2s ease-in-out;
+}
+.accordion__title:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+.accordion__title::after {
+    content: "\25be";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 5%;
+	transition: all 0.2s ease-in-out;
+}
+.accordion__body {
+	background: #ffffff;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 200ms ease-in-out;
+}
+.accordion__title.toggle::after {
+	content: "\25b4";
+}
+.accordion__body p {
+	padding: 14px 20px;
+	font: 500 0.9em 'Quicksand';
+}
